@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Autodesk.Revit.DB;
+using Utils.XYZUtils;
 
 namespace Utils.GeometryUtils
 {
@@ -43,6 +44,32 @@ namespace Utils.GeometryUtils
                solidList.Add(solid1);
          }
          return solidList;
+      }
+
+
+      public static bool IsVerticalPlanarFace(this PlanarFace planarFace)
+      {
+         var normal = planarFace.FaceNormal;
+         return normal.IsPerpendicular(XYZ.BasisZ);
+      }
+
+
+      public static DirectShape CreateDirectShape(this Solid solid)
+      {
+         var geo = new List<GeometryObject>() { solid};
+       
+         var directShape = DirectShape.CreateElement(ActiveDocument.ActiveDocument.Document, new ElementId(BuiltInCategory.OST_GenericModel));
+         directShape.SetShape(geo);
+
+         return directShape;
+      }
+
+      public  static Solid CreateOriginalSolidFromPlanarFace(this PlanarFace planarFace, double thickness = 0.082020997375)
+      {
+         var curveLoops = planarFace.GetEdgesAsCurveLoops();
+         var solid = GeometryCreationUtilities.CreateExtrusionGeometry(curveLoops, planarFace.FaceNormal, thickness);
+
+         return solid;
       }
    }
 }
