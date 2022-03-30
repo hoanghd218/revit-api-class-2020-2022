@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevitAPIAddins", "RevitAPIAddins\RevitAPIAddins.csproj", "{CE878F65-C5C7-4BEB-AAFB-C52B1899101E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "ClassLibrary1\Utils.csproj", "{43FF113C-65C7-43FA-A350-C1168318E5C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE878F65-C5C7-4BEB-AAFB-C52B1899101E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE878F65-C5C7-4BEB-AAFB-C52B1899101E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE878F65-C5C7-4BEB-AAFB-C52B1899101E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE878F65-C5C7-4BEB-AAFB-C52B1899101E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FF113C-65C7-43FA-A350-C1168318E5C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FF113C-65C7-43FA-A350-C1168318E5C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FF113C-65C7-43FA-A350-C1168318E5C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FF113C-65C7-43FA-A350-C1168318E5C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E342318F-DFB5-49BB-B5F6-046BE9E7BDB4}
+	EndGlobalSection
+EndGlobal
