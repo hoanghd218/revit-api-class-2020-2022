@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Revit Tools</Name>
+		<Assembly>RevitAPIAddins.dll</Assembly>
+		<FullClassName>RevitAPIAddins.App.RevitApiApp</FullClassName>
+		<ClientId>f36ced5e-3244-4131-9c33-ae3f5ed3d1ac</ClientId>
+		<VendorId>Revit Addins</VendorId>
+		<VendorDescription>https://www.facebook.com</VendorDescription>
+	</AddIn>
+</RevitAddIns>
