@@ -17,5 +17,10 @@ namespace Utils.DoubleUtils
          return false;
 
       }
+
+      public static double MmToFeet(this double numberInMm)
+      {
+         return numberInMm * 0.0032808399;
+      }
    }
 }

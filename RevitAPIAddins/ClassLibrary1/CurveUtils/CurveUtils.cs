@@ -21,5 +21,11 @@ namespace Utils.CurveUtils
          return curve.GetEndPoint(1);
       }
 
+
+      public static Curve CreateLine(this XYZ p1,XYZ p2)
+      {
+         return Line.CreateBound(p1,p2);
+      }
+
    }
 }

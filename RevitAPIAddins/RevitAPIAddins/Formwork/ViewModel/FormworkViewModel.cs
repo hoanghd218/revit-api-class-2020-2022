@@ -54,9 +54,26 @@ namespace RevitAPIAddins.Formwork.ViewModel
 
             foreach (var elementFormworkModel in elementFormworkModels)
             {
-               foreach (var sideFace in elementFormworkModel.SideFaces)
+               foreach (var sideFace in elementFormworkModel.OtherSideFaces)
                {
                   var sideFaceSolid = sideFace.CreateOriginalSolidFromPlanarFace();
+
+                  var intersectElements = GetElementsAroundFormworkElement(elementFormworkModel);
+
+
+                  var intersectSolids = intersectElements.SelectMany(x => x.GetAllSolids()).ToList();
+
+                  var realFormworkSolid = CutSolidBySolids(sideFaceSolid, intersectSolids);
+
+                  var area = realFormworkSolid.Volume / 0.082020997375;
+
+                  var ds = realFormworkSolid.CreateDirectShape();
+                  ds.LookupParameter("AREA").Set(area);
+               }
+
+               foreach (var sideFace in elementFormworkModel.LeftRightFaces)
+               {
+                  var sideFaceSolid = elementFormworkModel.GetSolidExtend2Sides(sideFace);
 
                   var intersectElements = GetElementsAroundFormworkElement(elementFormworkModel);
 
