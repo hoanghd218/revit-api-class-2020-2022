@@ -17,13 +17,7 @@ namespace RevitAPIAddins.App
       public Result OnShutdown(UIControlledApplication application)
       {
 
-
-
-
-
          return Result.Succeeded;
-
-
       }
 
       public Result OnStartup(UIControlledApplication application)

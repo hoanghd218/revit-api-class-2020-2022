@@ -1,0 +1,11 @@
+﻿<RevitAddIns>
+    <AddIn Type="Command">
+        <Name>StructuralCommand</Name>
+        <Assembly>StructuralCommand/StructuralCommand.dll</Assembly>
+        <AddInId>41121700-DBF1-40D7-AE49-C2F608915DC2</AddInId>
+        <FullClassName>StructuralCommand.Commands.Command</FullClassName>
+        <Text>StructuralCommand</Text>
+        <VendorId>CompanyName</VendorId>
+        <VendorDescription>Description</VendorDescription>
+    </AddIn>
+</RevitAddIns>
